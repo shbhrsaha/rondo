@@ -7,17 +7,13 @@ Rondo records actual execution behavior, not video, essentially enabling Virtual
 
 VMware has offered a similar feature called [Enhanced Execution Record / Replay](http://blogs.vmware.com/workstation/2008/04/enhanced-execut.html) since 2008, but Rondo brings that functionality to Oracle VirtualBox.
 
-Installation
----
-Install the Python requirements with:
+Install with:
 
-    pip install -r requirements.txt
+    pip install rondo
 
-Usage
----
-First, start the virtual machine you would like to record/replay executions on. Then run rondo with the following:
+Run with:
 
-    python rondo.py [--r record_log_file] [--p replay_log_file] virtual_machine_name
+    rondo [--r record_log_file] [--p replay_log_file] virtual_machine_name
 
 Tips
 ---
