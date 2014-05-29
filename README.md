@@ -1,11 +1,11 @@
 rondo
 =====
 
-Record and replay mouse and keyboard actions in VirtualBox sessions.
+Record and replay mouse and keyboard actions in Oracle VirtualBox sessions.
 
 Rondo records actual execution behavior, not video, essentially enabling VirtualBox users to create OS-wide macros.
 
-VMware offers a similar feature called [Enhanced Execution Record / Replay](http://blogs.vmware.com/workstation/2008/04/enhanced-execut.html) since 2008, but Rondo brings that functionality to Oracle VirtualBox.
+VMware has offered a similar feature called [Enhanced Execution Record / Replay](http://blogs.vmware.com/workstation/2008/04/enhanced-execut.html) since 2008, but Rondo brings that functionality to Oracle VirtualBox.
 
 Installation
 ---

@@ -1,13 +1,9 @@
 """
     Record and replay mouse and keyboard actions in VirtualBox sessions
 
-    Example record usage:
+    Usage:
 
-        python rondo.py --r name_of_virtual_machine session.log
-
-    Example replau usage:
-
-        python rondo.py --p name_of_virtual_machine session.log
+        python rondo.py [--r record_log_file] [--p replay_log_file] virtual_machine_name
 """
 
 import time
@@ -22,9 +18,9 @@ def record_keyboard(event):
     """
     Save a keyboard action.
     """
-
     global last_record_log
     logging.info("Keyboard %s" % event.scancodes)
+    
     now = datetime.datetime.now()
     diff = now - last_record_log
     last_record_log = now
@@ -38,9 +34,11 @@ def record_mouse(event):
     """
     global last_record_log
     logging.info("Mouse %s %s %s %s %s %s" % (event.mode, event.buttons, event.x, event.y, event.z, event.w))
+    
     now = datetime.datetime.now()
     diff = now - last_record_log
     last_record_log = now
+    
     f.write("%s M %s %s %s %s %s \n" % (diff.total_seconds(), event.buttons, event.x, event.y, event.z, event.w))
 
 if __name__ == "__main__":
