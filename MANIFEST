@@ -2,5 +2,5 @@
 setup.cfg
 setup.py
 rondo/__init__.py
-rondo/__main__.py
 rondo/rondo.py
+scripts/rondo
