@@ -5,6 +5,7 @@ setup(
   scripts=['scripts/rondo'],
   version = '0.3',
   description = 'Record and replay mouse and keyboard actions in VirtualBox sessions',
+  long_description=open('README.md').read(),
   author = 'Shubhro Saha',
   author_email = 'saha@princeton.edu',
   url = 'https://github.com/shbhrsaha/rondo',
