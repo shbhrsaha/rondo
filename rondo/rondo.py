@@ -14,6 +14,7 @@ import virtualbox
 
 logging.basicConfig(level=logging.INFO)
 
+f = None
 last_record_log = None
 
 def record_keyboard(event):
@@ -21,6 +22,7 @@ def record_keyboard(event):
     Save a keyboard action.
     """
     global last_record_log
+    global f
     logging.info("Keyboard %s" % event.scancodes)
     
     now = datetime.datetime.now()
@@ -35,6 +37,7 @@ def record_mouse(event):
     Save a mouse action
     """
     global last_record_log
+    global f
     logging.info("Mouse %s %s %s %s %s %s" % (event.mode, event.buttons, event.x, event.y, event.z, event.w))
     
     now = datetime.datetime.now()
@@ -45,6 +48,7 @@ def record_mouse(event):
 
 def main():
     global last_record_log
+    global f
     parser = argparse.ArgumentParser(
         description='Record and replay mouse and keyboard actions in VirtualBox sessions')
     parser.add_argument('vm_name', help='Name of virtual machine')
